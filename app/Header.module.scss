@@ -1,0 +1,12 @@
+.header {
+  background: rgb(204, 191, 215);
+  padding: 20px;
+  justify-content: space-between;
+  display: flex;
+  color: rgb(10, 44, 38);
+}
+
+.header > div:first-child {
+  display: flex;
+  gap: 16px;
+}
