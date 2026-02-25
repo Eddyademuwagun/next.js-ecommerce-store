@@ -32,8 +32,8 @@
 }
 
 .page div {
-  height: 350px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   background-size: cover; /* makes the image fill the entire area */
   background-position: center; /* centers the image */
   background-repeat: no-repeat;
@@ -45,6 +45,7 @@
   font-weight: 900;
   border-radius: 12px;
   padding-top: 150px;
+  margin: 0;
 }
 .main {
   display: flex;
