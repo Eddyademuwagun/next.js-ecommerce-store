@@ -8,6 +8,24 @@ export default function FlightsPage() {
   const [selectedReturnDate, setSelectedReturnDate] = useState('');
   const [selectFrom, setSelectFrom] = useState('');
   const [selectTo, setSelectTo] = useState('');
+  const availableFlights = [
+    {
+      from: 'Athens',
+      to: 'Vienna',
+      departure: '7.4.2026',
+      airline: 'lot',
+      duration: '2hrs',
+      price: '€70',
+    },
+    {
+      from: 'Paris',
+      to: 'Amsterdam',
+      departure: '7.4.2026',
+      airline: 'birds',
+      duration: '2hrs',
+      price: '€150',
+    },
+  ];
   return (
     <>
       <div className={styles.flights}>
@@ -29,6 +47,8 @@ export default function FlightsPage() {
               <option value="vienna">Vienna</option>
               <option value="amsterdam">Amsterdam</option>
               <option value="london">London</option>
+              <option value="paris">Paris</option>
+              <option value="athens">Athens</option>
             </select>
           </div>
         </div>
@@ -43,6 +63,8 @@ export default function FlightsPage() {
               <option value="vienna">Vienna</option>
               <option value="amsterdam">Amsterdam</option>
               <option value="london">London</option>
+              <option value="paris">Paris</option>
+              <option value="athens">Athens</option>
             </select>
           </div>
         </div>
