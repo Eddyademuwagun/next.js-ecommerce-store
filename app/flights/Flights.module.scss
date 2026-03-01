@@ -32,9 +32,8 @@
   padding-bottom: 10px;
 }
 
-.flightCard {
+.card {
   min-width: 250px;
-  height: 70px;
   background-color: #f4f4f4;
   border-radius: 12px;
   padding: 20px;
@@ -42,4 +41,39 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: black;
   font-weight: bolder;
+  margin-top: 20px;
+}
+
+.smallCard {
+  height: 70px;
+}
+
+.bigCard {
+  height: 200px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.image {
+  width: 90px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.background {
+  /* Background image */
+  background-image: url('/beach.jpg');
+  min-height: 80vh; /* Full viewport height */
+  width: 100%;
+  /* adjust path if needed */
+  background-size: cover; /* makes image fill entire area */
+  background-position: center; /* keeps image centered */
+  background-repeat: no-repeat;
+  margin-top: 0;
+  //  background-size: cover; /* makes the image fill the entire area */
+  // background-position: center; /* centers the image */
+  // background-repeat: no-repeat; /* prevents tiling */
 }
