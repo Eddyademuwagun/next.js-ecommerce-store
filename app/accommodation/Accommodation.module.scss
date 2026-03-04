@@ -1,0 +1,57 @@
+.accommodation {
+  background: rgb(173, 216, 230);
+  padding: 25px;
+  display: flex;
+  color: rgb(10, 44, 38);
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card {
+  min-width: 250px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  padding: 20px;
+  flex-shrink: 0; // prevents shrinking
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+
+.smallCard {
+  height: 50px;
+}
+
+.accommodationBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  overflow-x: auto;
+}
+
+.accommodationCardBox {
+  display: flex; /* makes children align in a row */
+  flex-direction: row; /* explicitly horizontal */
+  align-items: center; /* vertically center the cards */
+  gap: 20px; /* space between cards */
+  overflow-x: auto; /* allows horizontal scrolling if cards overflow */
+  padding-bottom: 10px; /* optional: spacing for scrollbar */
+  scroll-behavior: smooth; /* smooth scrolling on drag/scroll */
+}
+
+.background {
+  /* Background image */
+  // background-image: url('/beach.jpg');
+  min-height: 80vh; /* Full viewport height */
+  width: 100%;
+  /* adjust path if needed */
+  background-size: cover; /* makes image fill entire area */
+  background-position: center; /* keeps image centered */
+  background-repeat: no-repeat;
+  margin-top: 0;
+  background-color: rgb(108, 108, 220);
+}

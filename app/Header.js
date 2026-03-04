@@ -8,7 +8,7 @@ export default function Header() {
         <Link href="/">Homepage</Link>
         <Link href="/flights">Flights</Link>
         <Link href="/car-rental">Car Rental</Link>
-        <Link href="/accomodation">Accomodation</Link>
+        <Link href="/accommodation">Accommodation</Link>
         <Link href="/privacy-policy">Privacy Policy</Link>
         <Link href="/cookies-lang-switcher">Switch Language</Link>
       </div>

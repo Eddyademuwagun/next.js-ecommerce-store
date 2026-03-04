@@ -1,3 +1,15 @@
+// import { config } from 'dotenv-safe';
 import postgres from 'postgres';
 
-const sql = postgres('postgres://wings:wings@localhost:5432/wings');
+// config();
+
+const sql = postgres();
+
+const flights = await sql`
+  SELECT
+    *
+  FROM
+    flights;
+`;
+
+console.log(flights);

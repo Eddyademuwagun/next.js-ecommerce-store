@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+// import { getFlights } from '../database/flights';
 import Flight from './Flight';
 import styles from './Flights.module.scss';
 
@@ -9,28 +10,29 @@ export default function FlightsPage() {
   const [selectedReturnDate, setSelectedReturnDate] = useState('');
   const [selectFrom, setSelectFrom] = useState('');
   const [selectTo, setSelectTo] = useState('');
-  const availableFlights = [
-    {
-      id: 1,
-      from: 'Athens',
-      to: 'Vienna',
-      departure: '7.4.2026',
-      airline: 'lot',
-      duration: '2hrs',
-      price: '€70',
-      image: 'lot.jpg',
-    },
-    {
-      id: 2,
-      from: 'Paris',
-      to: 'Amsterdam',
-      departure: '7.4.2026',
-      airline: 'birds',
-      duration: '2hrs',
-      price: '€150',
-      image: 'bird.jpg',
-    },
-  ];
+  const availableFlights = [];
+  // [
+  // {
+  //   id: 1,
+  //   from: 'Athens',
+  //   to: 'Vienna',
+  //   departure: '7.4.2026',
+  //   airline: 'lot',
+  //   duration: '2hrs',
+  //   price: '€70',
+  //   image: 'lot.jpg',
+  // },
+  //   {
+  //     id: 2,
+  //     from: 'Paris',
+  //     to: 'Amsterdam',
+  //     departure: '7.4.2026',
+  //     airline: 'birds',
+  //     duration: '2hrs',
+  //     price: '€150',
+  //     image: 'bird.jpg',
+  //   },
+  // ];
   return (
     <>
       <div className={styles.flights}>
