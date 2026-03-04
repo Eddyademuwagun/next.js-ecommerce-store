@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // import { getFlights } from '../database/flights';
 import Flight from './Flight';
 import styles from './Flights.module.scss';
@@ -10,7 +10,7 @@ export default function FlightsPage() {
   const [selectedReturnDate, setSelectedReturnDate] = useState('');
   const [selectFrom, setSelectFrom] = useState('');
   const [selectTo, setSelectTo] = useState('');
-  const availableFlights = [];
+  const [availableFlights, setAvailableFlights] = useState([]);
   // [
   // {
   //   id: 1,
@@ -33,6 +33,35 @@ export default function FlightsPage() {
   //     image: 'bird.jpg',
   //   },
   // ];
+
+  useEffect(
+    () => {
+      async function fetchUsers() {
+        console.log('start fetching');
+        console.log('length1: ' + availableFlights.length);
+        const response = await fetch(
+          'http://localhost:3000/api/products/flights',
+        );
+        console.log('response. ' + response);
+        const json = await response.json();
+        console.log('json: ' + json);
+
+        setAvailableFlights(json);
+        console.log('availableFlights' + availableFlights);
+        console.log('length2: ' + availableFlights.length);
+      }
+
+      fetchUsers().catch((error) => {
+        console.error(error);
+      });
+    },
+    // Empty dependencies array = fetch once, on page load
+    [],
+  );
+
+  if (availableFlights.length === 0) {
+    return <>Loading...</>;
+  }
   return (
     <>
       <div className={styles.flights}>
@@ -115,7 +144,10 @@ export default function FlightsPage() {
         </div>
         <ul>
           {availableFlights.map((flight) => {
-            if (selectFrom === flight.from && selectTo === flight.to) {
+            if (
+              selectFrom === flight.departureCity &&
+              selectTo === flight.arrivalCity
+            ) {
               return (
                 <li key={`flight-${flight.id}`}>
                   <Flight flight={flight} />
